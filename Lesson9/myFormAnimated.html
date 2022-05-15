@@ -1,0 +1,217 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>myForm Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+<style type="text/css">
+body{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(media/frisbee-basket.jpg);
+    color:midnightblue;
+    text-shadow:2px 2px 1px springgreen;
+    font-size:18pt;
+    min-width:500px;
+}
+form{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+h1{
+	position:relative;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:5em;
+	text-align:center;
+	color:lawngreen;
+	font: weight 2px;
+	text-shadow:4px 4px 4px darkviolet;
+	width:40%;
+	animation:mymove 10s;
+   animation-fill-mode:forwards;
+
+}
+@keyframes mymove {
+    from {left: -30%;}
+    to {left: 20%;}
+}
+legend{
+	font-size:2em;
+	font-weight:1000;
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-left:10px;
+	color:#527ACC;
+	text-shadow:2px 2px 2px black;
+
+}
+label{
+	text-align:right;
+	width:150px;
+	float:left;
+	padding-right:10px;
+	color:black;
+	font-weight:900;
+	font-size:14pt;
+	vertical-align:text-top;
+}
+
+fieldset {
+	margin-bottom: 1%;
+	padding:1%;
+	width:60%;
+	flex:1;
+	max-width:600px;
+}
+	
+.inputButton{
+	font-size:14pt;
+	width: 100px; 
+	height: 30px;
+	font-size:12pt;
+	background-color: #EBF5FF;
+	color:black;
+	font-family: 'Nixie One', cursive;
+	font-weight:900;
+	margin-top:50px;
+	box-shadow:2px 2px 2px black;
+	transition: width 1s, height 1s, transform 1s;
+transition-timing-function:ease-in;
+}
+.inputButton:hover{
+    width: 300px;
+    height: 90px;
+    color:black;
+    transform: rotate(360deg);
+}
+
+.formEntry{
+	text-align:left;
+	width:200px;
+	font-size:14pt;
+	color:black;
+}
+.money{
+	text-align:left;
+	font-size:12pt;
+	color:black;
+	width:275px;
+}
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+from {
+    margin-left:200%;
+    width: 300%;
+    }
+
+to {
+    margin-left: 0%;
+    width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+<form name="frolfClub" id="frolfClub" action="https://lisabalbach.com/CIT180/Lesson8/FormProcessor.html" method="get">
+    <input type="hidden" name="mailto" value="mailto:farrert@mail.nmc.edu">
+    <h1>Frolf Club</h1>
+<fieldset style="background-color: lightgreen;">
+	<legend>Personal details</legend>
+	<div style="display: block;">
+		<p><label>Name</label>
+		<input class="formEntry" id="name" name="name" type="text" placeholder="Name" required autofocus> </p>
+		<p><label>Address</label>
+		<input class="formEntry" id="address" name="address" type="text" placeholder="Street Address" required ></p>
+		<p><label>City</label>
+        <input class="formEntry" id="city" name="city" type="text" placeholder="City" required ></p>
+        <p><label>State</label>
+        <input class="formEntry" id="state" name="state" type="text" placeholder="State" required ></p>
+        <p><label>Zip</label>
+        <input class="formEntry" id="zip" name="zip" type="number" placeholder="Zip" required ></p>
+		<p><label>Telephone </label>
+        <input class="formEntry" id="phone" name="phone" type="tel" placeholder="(231) 775-2017" required> </p>       
+        <p><label>Email </label>
+		<input class="formEntry" id="email" name="email" type="email" placeholder="example@domain.com" required> </p>
+	</div>
+</fieldset>
+
+
+<fieldset style="background-color: lightgreen;">
+	<legend>Preferences</legend>
+
+		<p><label>Skill Level </label><br/>
+            <div style="display: inline;" >
+                <label>Beginner</label> <input id="options" name="options" type="radio"> <br/>
+                <label>Intermediate</label><input id="options" name="options" type="radio"> <br/>
+                <label>Professional</label><input  id="options" name="options" type="radio">
+            </div>
+		
+
+		<hr><p><label>Day(s) of the Week </label><br>
+            <div>
+            <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Sunday" class="shortinputButton">
+                <label for="sunday">Sunday</label>
+              </p>
+              <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Monday" class="shortinputButton">
+                <label for="monday">Monday</label>
+              </p>
+              <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Tuesday" class="shortinputButton">
+                <label for="tuesday">Tuesday</label>
+              </p>
+              <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Wednesday" class="shortinputButton">
+                <label for="wednesday">Wednesday</label>
+              </p>
+              <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Thursday" class="shortinputButton">
+                <label for="thursday">Thursday</label>
+              </p>
+              <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Friday" class="shortinputButton">
+                <label for="friday">Friday</label>
+              </p>
+              <p>
+                <input type="checkbox" name="boxes" id="boxes" value="Saturday" class="shortinputButton">
+                <label for="saturday">Saturday</label>
+              </p>
+            </div>
+
+		<hr><p><label>Time of Day </label><br>
+		<input class="formEntry" list="select2" id="time" name="time"  placeholder="Please select" required>
+		<datalist id="select2">
+			<option value="Morning"></option>
+			<option value="Noon"></option>
+			<option value="Evening"></option>
+        </datalist></p>
+
+        <p><label>Car Pool </label><br>
+            <select id="select1" name="select1" class="formEntry" required>
+                <option value="Alone">Alone</option>
+                <option value="MustDrive">Must Drive</option>
+                <option value="CanDrive">Can Drive</option>
+                <option value="Passanger">Passanger</option>
+            </select></p>
+
+            <p><label>Comments</label><br>
+                <textarea rows="10" cols="50" id="TextArea" name="TextArea" wrap="soft" style="font-size:14pt;"></textarea>
+            </p>
+                </fieldset>
+
+<div style="width: 40%;">
+	<p style="text-align: center; margin-right: 2%;">
+	<button class="inputButton" type="submit" style="width: 200px;">Submit Registration</button>
+	<button class="inputButton" type="reset">Reset</button></p>
+</div>
+</form> 
+</body>
+</html>

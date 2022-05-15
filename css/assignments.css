@@ -1,0 +1,138 @@
+body {
+    font-family: fantasy;
+    font-size: xx-large;
+    text-align: center;
+    padding: 11%;
+    padding-bottom: 13%;
+}
+a:link {
+    color: #7718EB;
+    text-decoration: double;
+}
+a:visited {
+    color: #EB9C2F;
+    text-decoration: transparent;
+}
+a:hover {
+    color: #00EB41;
+    text-decoration: dotted;
+    background-color: #7718EB;
+}
+a:active {
+    color: #089E32;
+    text-decoration: dashed;
+}
+h1 {
+    padding-top: 0%;
+    font-size: 200%;
+    color: #00EB41;
+    text-shadow: 3px 3px black;
+    transition: width 1s, height 1s, transform 1s;
+transition-timing-function:ease-in;
+}
+h1:hover {
+
+color:purple;
+transform: rotate(360deg); 
+}
+h2, h3 {
+    position: relative;
+    color: #089E32;
+    font-size: larger;
+    text-shadow: 3px 3px black;
+    width: 50%;
+    background-color: #7718EB;
+    padding: 5%;
+    animation:mymove 10s;
+    animation-fill-mode:forwards;
+}
+@keyframes mymove {
+    from {left: -30%;}
+    to {left: 20%;}
+}
+footer {
+    text-align: left;
+    background-color: #EB9C2F;
+    color: #47009E;
+    width: 25%;
+    padding: 10%;
+}
+nav {
+	margin:50px auto; 
+	text-align: center;
+}
+
+nav ul {
+    background: linear-gradient(0deg, white, peachpuff, white); 
+	box-shadow: 6px 6px 6px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	color:black;
+	font-weight:900;
+	width:100%;
+	display:inline-table;
+}
+nav ul li {
+	display:inline-table;
+}
+nav ul li a {
+	display: block; 
+	padding: 25px 40px;
+	color:#808080; 
+	text-decoration: none;
+}
+nav ul li:hover {
+    background: linear-gradient(180deg, white, #ffb878, peachpuff); 
+}
+nav ul li:hover a {
+	color:#757575;
+}
+nav ul li:hover > ul {
+	display:flex;
+	flex-direction:column;
+	width:30%;
+}
+	
+nav ul ul {
+	display: none;
+    background: linear-gradient(180deg, white,  peachpuff); 
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	z-index:10;
+}
+nav ul ul li {
+	display:block; 
+	border-top: 1px solid #757575;
+	border-bottom: 1px solid #757575; 
+	position: relative;
+}
+nav ul ul li a {
+	padding: 15px 40px;
+	color: #757575;
+}	
+nav ul ul li a:hover {
+	background: peachpuff;
+	color:orange;
+}
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: darkorange;
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
